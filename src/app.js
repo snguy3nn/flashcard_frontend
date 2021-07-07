@@ -9,7 +9,6 @@ function App() {
       <div>
         <Flashcard />
         <Collection />
-        <h1>Create Flashcard</h1>
         <CreateCard />
         </div> 
   );

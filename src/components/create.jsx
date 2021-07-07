@@ -13,6 +13,10 @@ export function CreateCard() {
   }
 
   return (
+    <div>
+        <div>
+            <h1>Create New Flashcard</h1>
+        </div>
     <form onSubmit={handleSubmit}>
       <label>
         Word:
@@ -30,5 +34,6 @@ export function CreateCard() {
       </label>
       <input type="submit" value="Submit" />
     </form>
+    </div>
   );
 }
