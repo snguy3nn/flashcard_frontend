@@ -38,16 +38,24 @@ function Flashcard() {
       setCardnumber(card)
     }
 
+    function editFlashCard() {
+      axios.put('http://127.0.0.1:8000/flashcard/')
+      .then((res) => {
+        setFlashcard(res.data);
+      });
+    }
+
     return(
       <div>
           <div>
             <h1>{flashcard[cardNumber].subject}</h1>
-            <h2>{flashcard[cardNumber].question}</h2>
-            <h3>{flashcard[cardNumber].answer}</h3>
+            <h2>{flashcard[cardNumber].word}</h2>
+            <h3>{flashcard[cardNumber].definition}</h3>
           </div>
           <div>
             <button onClick={() => goToPreviousCard()}>Previous Card</button>
             <button onClick={() => goToNextCard()}>Next Card</button>
+            <button onClick={() => editFlashCard()}>Edit</button>
           </div>
       </div>
     )
