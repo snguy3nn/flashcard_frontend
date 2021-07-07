@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const Collection = () => {
+function Collection() {
   const [ collection, setCollection ] = useState([]);
 
   useEffect(() => {
